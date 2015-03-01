@@ -96,7 +96,7 @@ out_path = "../q2pc_data/"
 
 #  per server settings
 #  (hostname, ip )
-server =  ( "nikola07.xeno.cl.cam.ac.uk", "p786p1", "6", "001b21baa592")
+server =  ( "nikola07", "p786p1", "6", "001b21baa592")
 #  per host settings
 #  (hostname, ethernet, ip, mac)
 clients = [\
