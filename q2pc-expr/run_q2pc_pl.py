@@ -96,7 +96,7 @@ out_path = "../q2pc_data/"
 
 #  per server settings
 #  (hostname, ip )
-server =  ( "nikola07.xeno.cl.cam.ac.uk", "p786p1", "6", "001b21baa592")
+server =  ( "nikola07", "p786p1", "6", "001b21baa592")
 #  per host settings
 #  (hostname, ethernet, ip, mac)
 clients = [\
@@ -221,8 +221,8 @@ def run_data_sources():
 
         nm_opts_str = " ".join(nm_opts)
 
-        netmap_cmd = "sudo /home/qjump/qjump/qjump_fe2p_aps/switch_test/bin/packet_gen %s" % (nm_opts_str )
-        pin_cmd = "cd /home/qjump/qjump/tools/pin && sudo ./pin 3 \\\"%s\\\"" % ( netmap_cmd )
+        netmap_cmd = "sudo /home/qjump/qjump-camio-tools/packet_gen/bin/packet_gen %s" % (nm_opts_str )
+        pin_cmd = "cd /home/qjump/qjump-expr-tools/pin && sudo ./pin 3 \\\"%s\\\"" % ( netmap_cmd )
         run_remote_cmd(subs, nm_host, pin_cmd)
 
 #end data sources
@@ -262,7 +262,7 @@ def run_q2pc_coord():
 
     q2pc_opts_str = " ".join(q2pc_opts)
 
-    cmd = "sudo /home/qjump/q2pc/bin/q2pc %s " % q2pc_opts_str
+    cmd = "sudo /home/qjump/qjump-q2pc/bin/q2pc %s " % q2pc_opts_str
     priority_cmd = "cd /home/qjump/qjump-app-util/ && sudo ./qjau.py -p %s -w 25000000 -c \\\"%s\\\"" % (q2pc_priority, cmd )
 
     run_remote_cmd(subs,srv_host, priority_cmd)
