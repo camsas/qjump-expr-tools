@@ -13,5 +13,8 @@ Tools for setting up and running the q2pc expriment (figure 7).
 
 memd-rate-expr
 --------------
-Tools for setting up and running the memcached rate limiter experiement (figure 10)
+Tools for setting up and running the memcached rate limiter experiement (figure 10).
 
+factor-expr
+-----------
+Toos for setting up and running the f "throughput factor" experiment (figure 11).
